@@ -62,6 +62,4 @@ foreach($students['БАП20'] as $name_student => $mark_student){
 print_r($result_0 . PHP_EOL);
 print_r($result_1);
 
-// $unsatisfactoryStudentsA = array_values($students["ИТ20"]);
-// print_r($unsatisfactoryStudentsA);
 
