@@ -32,10 +32,36 @@ echo $students_0 . PHP_EOL;
 echo $students_1 . PHP_EOL;
 
 if($students_0 > $students_1){
-    echo "ИТ20 имеет результат оценок выше";
+    echo "ИТ20 имеет результат оценок выше" . PHP_EOL;
 }elseif($students_1 > $students_0){
-    echo "БАП20 имеет результат оценок выше";
+    echo "БАП20 имеет результат оценок выше" . PHP_EOL;
 } 
 else{ 
-    echo "группы равноценны по оценкам"; 
+    echo "группы равноценны по оценкам" . PHP_EOL; 
 }
+
+$unsatisfactoryStudentsA = [];
+$unsatisfactoryStudentsB = [];
+
+foreach($students['ИТ20'] as $name_student => $mark_student){
+if($mark_student < 3){
+    $unsatisfactoryStudentsA = $name_student;
+}
+}
+$result_0 = "Эти студенты группы ИТ20 на отчисление: $unsatisfactoryStudentsA";
+
+foreach($students['БАП20'] as $name_student => $mark_student){
+    if($mark_student < 3){
+        $unsatisfactoryStudentsB = $name_student;
+    }
+    }
+    $result_1 = "Эти студенты группы БАП20 на отчисление: $unsatisfactoryStudentsB";
+    
+
+
+print_r($result_0 . PHP_EOL);
+print_r($result_1);
+
+// $unsatisfactoryStudentsA = array_values($students["ИТ20"]);
+// print_r($unsatisfactoryStudentsA);
+
